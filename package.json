@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prod": "export NODE_ENV=production && pm2 start ecosystem.config.cjs"
+    "prod": "export $(grep -v '^#' .production.env | xargs) && pm2 start ecosystem.config.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.3",
