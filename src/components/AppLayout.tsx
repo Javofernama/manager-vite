@@ -2,6 +2,7 @@ import type React from "react"
 import { Layout, Menu, Typography, Avatar, Dropdown } from "antd"
 import { UserOutlined, LogoutOutlined } from "@ant-design/icons"
 import { Link, Outlet, useNavigate } from "react-router-dom"
+import { useEffect } from "react"
 
 const { Header, Content, Footer } = Layout
 const { Title } = Typography
@@ -15,6 +16,14 @@ const AppLayout: React.FC = () => {
     localStorage.removeItem("token")
     navigate("/login")
   }
+
+  useEffect(()=>{
+    if (localStorage.getItem("token")) {
+      navigate("/home")
+    } else {
+      navigate("/login");
+    }
+  },[navigate])
 
   const menu = (
     <Menu>
@@ -42,7 +51,7 @@ const AppLayout: React.FC = () => {
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>
-        Sistema de gestion de compañias ©{new Date().getFullYear()} Created by Your Company
+        Sistema de gestion de compañias ©{new Date().getFullYear()} Creado por algún loco raro
       </Footer>
     </Layout>
   )
