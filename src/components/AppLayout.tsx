@@ -29,7 +29,7 @@ const AppLayout: React.FC = () => {
       <Header className="flex items-center justify-between">
         <div className="flex items-center">
           <Title level={3} style={{ color: "white", margin: 0 }}>
-            <Link to="/">Company Management System</Link>
+            <Link to="/">Sistema de gestion de compañias</Link>
           </Title>
         </div>
         <Dropdown overlay={menu} placement="bottomRight" arrow>
@@ -42,7 +42,7 @@ const AppLayout: React.FC = () => {
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>
-        Company Management System ©{new Date().getFullYear()} Created by Your Company
+        Sistema de gestion de compañias ©{new Date().getFullYear()} Created by Your Company
       </Footer>
     </Layout>
   )

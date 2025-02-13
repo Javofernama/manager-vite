@@ -97,8 +97,8 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Title level={2}>Company List</Title>
-      <Search placeholder="Search companies" onSearch={handleSearch} style={{ marginBottom: 20 }} />
+      <Title level={2}>Listado de compañias</Title>
+      <Search placeholder="Buscar compañia" onSearch={handleSearch} style={{ marginBottom: 20 }} />
       <List
         itemLayout="vertical"
         size="large"

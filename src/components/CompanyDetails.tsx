@@ -101,6 +101,7 @@ const CompanyDetails: React.FC<CompanyDetailsProps> = ({ company, onAssign, onCr
                         description={
                           <Space direction="vertical">
                             <Text>{action.actionDescription}</Text>
+                            <Text>Tipo de acción: {action.actionType}</Text>
                             <Space>
                               <CalendarOutlined />
                               <Text>{new Date(action.actionDate).toLocaleDateString()}</Text>

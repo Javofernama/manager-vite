@@ -24,7 +24,7 @@ const AppLayout: React.FC<LayoutProps> = ({ children, onLogout }) => {
       <Header className="flex items-center justify-between">
         <div className="flex items-center">
           <Title level={3} style={{ color: "white", margin: 0 }}>
-            <a href="/">Company Management System</a>
+            <a href="/">Sistema de gestion de compañias</a>
           </Title>
         </div>
         <Dropdown overlay={menu} placement="bottomRight" arrow>
@@ -35,7 +35,7 @@ const AppLayout: React.FC<LayoutProps> = ({ children, onLogout }) => {
         <div className="site-layout-content">{children}</div>
       </Content>
       <Footer style={{ textAlign: "center" }}>
-        Company Management System ©{new Date().getFullYear()} Created by Your Company
+        Sistema de gestion de compañias ©{new Date().getFullYear()} Created by Your Company
       </Footer>
     </Layout>
   )
