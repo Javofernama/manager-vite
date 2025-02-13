@@ -30,38 +30,38 @@ const ActionModal: React.FC<ActionModalProps> = ({ isOpen, assignId, onClose, on
   }
 
   return (
-    <Modal title="Create New Action" open={isOpen} onCancel={onClose} onOk={handleSubmit}>
+    <Modal title="Formulario para crear una nueva acción" open={isOpen} onCancel={onClose} onOk={handleSubmit}>
       <Form form={form} layout="vertical">
         <Form.Item
           name="actionTitle"
-          label="Title"
-          rules={[{ required: true, message: "Please input the action title!" }]}
+          label="Titulo de la acción"
+          rules={[{ required: true, message: "Por favor ingrese el titulo de la acción!" }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
           name="actionDescription"
-          label="Description"
-          rules={[{ required: true, message: "Please input the action description!" }]}
+          label="Breve descripción"
+          rules={[{ required: true, message: "Por favor ingrese una breve descripción!" }]}
         >
           <TextArea rows={4} />
         </Form.Item>
         <Form.Item
           name="actionType"
-          label="Type"
-          rules={[{ required: true, message: "Please select the action type!" }]}
+          label="Tipo"
+          rules={[{ required: true, message: "Por favor escoja un tipo!" }]}
         >
           <Select>
-            <Select.Option value="call">Call</Select.Option>
-            <Select.Option value="meeting">Meeting</Select.Option>
-            <Select.Option value="email">Email</Select.Option>
-            <Select.Option value="task">Task</Select.Option>
+            <Select.Option value="Llamado">Llamado</Select.Option>
+            <Select.Option value="Reunión">Reunión</Select.Option>
+            <Select.Option value="Email">Email</Select.Option>
+            <Select.Option value="Tarea">Tarea especifica</Select.Option>
           </Select>
         </Form.Item>
         <Form.Item
           name="actionDate"
-          label="Date"
-          rules={[{ required: true, message: "Please select the action date!" }]}
+          label="Fecha"
+          rules={[{ required: true, message: "Por favor escoja una fecha en la que llevará a cabo esta acción!" }]}
         >
           <DatePicker />
         </Form.Item>

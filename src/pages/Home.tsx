@@ -112,9 +112,6 @@ const Home: React.FC = () => {
         renderItem={(company) => (
           <List.Item
             key={company.companyId}
-            extra={
-              <img width={272} alt="company logo" src={`https://picsum.photos/seed/${company.companyName}/272/172`} />
-            }
           >
             <List.Item.Meta
               title={<a onClick={() => toggleCompany(company.companyId)}>{company.companyName}</a>}

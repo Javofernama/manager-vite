@@ -28,22 +28,22 @@ const CompanyDetails: React.FC<CompanyDetailsProps> = ({ company, onAssign, onCr
 
   return (
     <Card>
-      <Descriptions title="Company Information" bordered>
-        <Descriptions.Item label="Address">{company.companyAddress}</Descriptions.Item>
-        <Descriptions.Item label="Industry">{company.companyIndustry}</Descriptions.Item>
-        <Descriptions.Item label="Revenue">{company.companyRevenue}</Descriptions.Item>
+      <Descriptions title="Información de la compañia" bordered>
+        <Descriptions.Item label="Dirección">{company.companyAddress}</Descriptions.Item>
+        <Descriptions.Item label="Industria">{company.companyIndustry}</Descriptions.Item>
+        <Descriptions.Item label="Ganancias">{company.companyRevenue}</Descriptions.Item>
         <Descriptions.Item label="Website">
           <Link href={company.companyWebsite} target="_blank">
             <GlobalOutlined /> {company.companyWebsite}
           </Link>
         </Descriptions.Item>
-        <Descriptions.Item label="Phone">
+        <Descriptions.Item label="Telefono">
           <PhoneOutlined /> {company.companyPhone}
         </Descriptions.Item>
       </Descriptions>
 
       <Collapse defaultActiveKey={["1"]} className="mt-4">
-        <Panel header="Contacts" key="1">
+        <Panel header="Contactos" key="1">
           <List
             itemLayout="horizontal"
             dataSource={company.Contact}
@@ -70,23 +70,23 @@ const CompanyDetails: React.FC<CompanyDetailsProps> = ({ company, onAssign, onCr
         </Panel>
       </Collapse>
 
-      <Card title="Assignment" className="mt-4">
+      <Card title="Asignaciones" className="mt-4">
         {company.Assign && company.Assign.User ? (
           <>
             <Descriptions bordered>
-              <Descriptions.Item label="Assigned To">
+              <Descriptions.Item label="Asignado a:">
                 <UserOutlined /> {`${company.Assign.User.userName} ${company.Assign.User.userLastName}`}
               </Descriptions.Item>
               <Descriptions.Item label="Email">{company.Assign.User.userEmail}</Descriptions.Item>
             </Descriptions>
             <div className="mt-4">
               <Space style={{ justifyContent: "space-between", width: "100%" }}>
-                <Text strong>Actions:</Text>
+                <Text strong>Acciones:</Text>
                 <Button type="primary" icon={<PlusOutlined />} onClick={() => {
                     setIsModalOpen(true);
                     setAssignId(company.Assign?.assignId);
                     }}>
-                  Create Action
+                  Crear una acción
                 </Button>
               </Space>
               {company.Assign.Action && company.Assign.Action.length > 0 ? (
@@ -112,13 +112,13 @@ const CompanyDetails: React.FC<CompanyDetailsProps> = ({ company, onAssign, onCr
                   )}
                 />
               ) : (
-                <Text className="mt-4 block">No actions yet.</Text>
+                <Text className="mt-4 block">Sin acciones aún.</Text>
               )}
             </div>
           </>
         ) : (
           <Button type="primary" onClick={() => onAssign(company.companyId)}>
-            Assign Company
+            Asigname la compañia
           </Button>
         )}
       </Card>

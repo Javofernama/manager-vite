@@ -22,7 +22,7 @@ const CompanyList: React.FC<CompanyDetailsListProps> = ({ companies }) => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Company List</h1>
+      <h1 className="text-2xl font-bold mb-4">Compañias</h1>
       <div className="space-y-4">
         {companies.map((company) => (
           <div key={company.companyId} className="border rounded-lg shadow-sm">
@@ -40,13 +40,13 @@ const CompanyList: React.FC<CompanyDetailsListProps> = ({ companies }) => {
             {expandedCompany === company.companyId && (
               <div className="p-4 border-t">
                 <p className="mb-2">
-                  <strong>Address:</strong> {company.companyAddress}
+                  <strong>Dirección:</strong> {company.companyAddress}
                 </p>
                 <p className="mb-2">
-                  <strong>Industry:</strong> {company.companyIndustry}
+                  <strong>Industria:</strong> {company.companyIndustry}
                 </p>
                 <p className="mb-2">
-                  <strong>Revenue:</strong> {company.companyRevenue}
+                  <strong>Ganacias:</strong> {company.companyRevenue}
                 </p>
                 <p className="mb-2 flex items-center">
                   <Globe className="w-4 h-4 mr-2" />
@@ -63,7 +63,7 @@ const CompanyList: React.FC<CompanyDetailsListProps> = ({ companies }) => {
                   <Phone className="w-4 h-4 mr-2" />
                   {company.companyPhone}
                 </p>
-                <h3 className="text-lg font-semibold mb-2">Contacts:</h3>
+                <h3 className="text-lg font-semibold mb-2">Contactos:</h3>
                 <div className="space-y-4">
                   {company.Contact.map((contact) => (
                     <div key={contact.contactId} className="border-t pt-2">
@@ -86,7 +86,7 @@ const CompanyList: React.FC<CompanyDetailsListProps> = ({ companies }) => {
                   ))}
                 </div>
                 <div className="mt-4 pt-4 border-t">
-                  <h3 className="text-lg font-semibold mb-2">Assignment:</h3>
+                  <h3 className="text-lg font-semibold mb-2">Asignamiento:</h3>
                   {company.Assign && company.Assign.User ? (
                     <div className="flex items-center">
                       <User className="w-4 h-4 mr-2" />
@@ -100,7 +100,7 @@ const CompanyList: React.FC<CompanyDetailsListProps> = ({ companies }) => {
                       onClick={() => assignCompany(company.companyId)}
                       className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     >
-                      Assign Company
+                      Asignarme esta Compañia
                     </button>
                   )}
                 </div>

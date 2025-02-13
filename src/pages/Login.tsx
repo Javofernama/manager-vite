@@ -40,10 +40,10 @@ const Login: React.FC = () => {
       }}
     >
       <Card
-        title="Login"
+        title="Inicio de sesión"
         bordered={true}
         style={{
-          width: 300,
+          width: 500,
         }}
       >
         <Text type="danger">{ message }</Text>
@@ -61,7 +61,7 @@ const Login: React.FC = () => {
             rules={[
               {
                 required: true,
-                message: "Please input your email!",
+                message: "Por favor ingresa tu email!",
                 type: "email",
               },
             ]}
@@ -70,16 +70,16 @@ const Login: React.FC = () => {
           </Form.Item>
 
           <Form.Item
-            label="Password"
+            label="Contraseña"
             name="password"
-            rules={[{ required: true, message: "Please input your password!" }]}
+            rules={[{ required: true, message: "Por favor Ingresa tu contraseña!" }]}
           >
             <Input.Password />
           </Form.Item>
 
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
             <Button type="primary" htmlType="submit">
-              Submit
+              Ingresar
             </Button>
           </Form.Item>
         </Form>
